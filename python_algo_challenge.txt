@@ -1,0 +1,191 @@
+# Setting and swapping
+# set my_number to 42. set my_name to your name. Now swap my_number into my_name and vice versa
+def swap(name, number):
+    my_number = number
+    my_name = name
+
+    temp = my_number
+    my_number = my_name
+    my_name = temp
+
+    print my_name
+    print my_number
+
+
+# print -52 through 1066
+def show_range():
+    for i in range(-52, 1067):
+        print(i)
+
+
+# create be_cheerful(). within it, console.log string "good morning!" call it 98 times
+def be_cheerful():
+    print("good morning!")
+
+
+def many_times(num):
+    for i in range(num + 1):
+        be_cheerful()
+
+
+# using for, print multiples of 3 from -300 to 0, skip -3 and -6
+def multiple_of_three():
+    for i in range(-300, 1):
+        if i % 3 == 0 and i != -3 and i != -6:
+            print (i) 
+
+
+# print integers 2000 to 5280 with while loop
+def counter():
+    count = 2000
+    while count < 5280:
+        print count
+        count += 1
+
+
+#if 2 given number represent your birth month and day in either order, log "how did you know?", else log "Just another day..."
+def log_day(num1, num2):
+    if num1 == 5 and num2 == 6:
+        print ("how did you know?")
+    elif num1 == 6 and num2 == 5:
+        print ("how did you know?")
+    else:
+        print("Just another day ...")
+
+
+#leap year
+# write a function that determines whether a given year is a leap year. if a year is divisible by four,
+# it is a leap year, unless it is divisble by 100. However, if it is divisible by 400, then it is
+def leap_year(num):
+    leap = False
+    if num % 4 == 0:
+        if num % 400 == 0:
+            leap = True
+        elif num % 100 == 0:
+            leap = False
+        else:
+            leap = True
+    return leap
+
+
+#print and count
+#print all integers multiples of 5, from 512 to 4096. Afterward, also log how many there were.
+def print_and_count():
+    count = 0
+    for i in range(512, 4096):
+        if i % 5 == 0:
+            print (i)
+            count = count + 1 
+    return count
+
+
+# multiples of 6
+# print multiples of 6 up to 60,000 using a while
+def multiples_of_six():
+    count = 6
+    while count <= 60000:
+        print count
+        count = count + 6
+    return 
+
+
+# counting the dojo way
+# print integers 1 to 100. If divisible by 5, print "coding" instead. if by 10, also print "dojo"
+def counting_dojo():
+    for i in range (1,101):
+        if i % 5 == 0:
+            print "Coding"
+        if i % 10 == 0:
+            print "Dojo"
+
+
+# what do you know?
+# your funtion will be given an input parameter incoming. please print this value
+def what_do_you_know(incoming):
+    print incoming
+
+
+
+# add odd integers from -11 to 11 and print the final sum, is there a short cut?
+def meet_me_halfway():
+    runner1 = -11
+    runner2 = 11
+    while runner1 < runner2:
+        print runner1
+        print runner2
+        runner1 = runner1 + 2
+        runner2 = runner2 - 2
+
+
+
+# countdown by fours
+# log positive numbers starting at 2016, counting down by fours(exclude 0), without a for loop
+def count_down_four():
+    number = 2016
+    while number > 0:
+        print number
+        number = number - 4
+
+
+# flexible countdown
+# based on countdown by fours. given lowNum, highNum, mult, print mults from highNum to lowNum
+def flex_countdown(low, high, mult):
+    for i in range (low, high):
+        if i % mult == 0:
+            print i
+
+# final countdown
+# just like flexible countdown, add an extra parameter so that if mult is equal to para4, skip that number using a while loop
+def final_countdown(mult,low, high, para4):
+    while low < high:
+        low = low + 1
+        if low % mult == 0 and low != para4:
+            print low
+
+
+# countdown
+# create a function that accepts a number as an input. return a new array that counts down by one, from the number
+# down to 0 as the last element. how longis this array?
+def countdown(num):
+    new_list = []
+    for count in range(num, 0, -1):
+        new_list.append(count)
+    return new_list
+
+
+# print and return
+# the function will receive an array with two numbers. print the first value and return the second.
+def print_and_return(list):
+    print list[0]
+    return list[1]
+
+
+# first plus length
+# given and array, return the sum of the first value in the array plus the arrays length.
+# what happens if the array's first value is not a number but a string or boolean.
+def first_plus_length(list):
+    if type(list[0]) is int:
+        sum = list[0] + len(list)
+    elif type(list[0]) is str:
+        sum = "First value of list is a String"
+    elif type(list[0]) is bool:
+        sum = "First value of list is a Boolean"
+    else:
+        sum = "idonno what it is?"
+    return sum
+
+
+# values greater than second
+# given a list, print values that are greater than its 2nd value. Return how many values this is.
+def val_greater_than_second(list):
+    count = 0
+    for i in list:
+        if i > list[1]:
+            print i
+            count = count + 1
+    return count
+mylist = [1,19,12,22,33,51,3,5,7,8]
+
+
+# this length, that value
+# given two numbers, return array of length num1 with each value num2. Print "Jinx" if they are the same
