@@ -1,0 +1,46 @@
+class User:		                               
+    def __init__(self, username, email_address):
+        self.name = username			        
+        self.email = email_address		        
+        self.account_balance = 0		        
+    
+    def make_deposit(self, amount):	        
+        self.account_balance +=amount       
+   
+    def make_withdrawal(self,amount):
+        self.account_balance -=amount
+    
+    def display_user_balance(self):
+        print(self.account_balance)
+        
+        guido = User("Guido Van Rossum","guido@python.com")
+        monty = User("Monty Python","monty@python.com")
+        sonam = User("Sonam Sherpa","sonam@python.com")
+   
+        guido.make_deposit(100)
+        guido.make_deposit(200)
+        guido.make_deposit(100)                 
+   
+        guido.make_withdrawal(50)               
+   
+        print(guido.account_balance)	       
+    
+        monty.make_deposit(50)                  
+        monty.make_deposit(50)                  
+   
+        monty.make_withdrawal(25)
+        monty.make_withdrawal(25)              
+    
+        print(monty.account_balance)            
+   
+        sonam.make_deposit(500)                 
+  
+        sonam.make_withdrawal(50)
+        sonam.make_withdrawal(50)
+        sonam.make_withdrawal(50)               
+    
+        print(sonam.account_balance)            
+
+    
+
+      

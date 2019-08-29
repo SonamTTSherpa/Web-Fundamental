@@ -1,0 +1,35 @@
+class User:		                               
+    def __init__(self, username, email_address):
+        self.name = username			        
+        self.email = email_address		        
+        self.account = bankAccount(int_rate=0.02, balance=0)		        
+    # adding the deposit method
+    def make_deposit(self, amount):	        
+        self.account +=amount  
+        return self     
+    #Add a make_withdrawal method to the User class
+    def make_withdrawal(self,amount):
+        self.account -=amount
+        return self
+    #Add a display_user_balance method to the User class
+    def display_user_balance(self):
+        print(self.account.balance)
+        return self
+
+guido = User('Guido Van Rossum','guido@python.com')
+monty = User('Monty Python','monty@python.com')
+sonam = User('Sonam Sherpa','sonam@python.com')
+# 1st users Make 3 Deposits  #1st users make 1 Withdrawls   #Display balance
+guido.make_deposit(100).make_deposit(200).make_deposit(100).make_withdrawal(50).display_user_balance() 
+                                       	       
+#2nd User make 2 Deposits   #2nd User make 2 Withdrawls   #Display 2nd user balance
+monty.make_deposit(50).make_deposit(50).make_withdrawal(25).make_withdrawal(25).display_user_balance()                
+    
+#Have the third user make 1 deposits    #3 withdrawals      #display their balance
+sonam.make_deposit(500).make_withdrawal(50).make_withdrawal(50).make_withdrawal(50).display_user_balance()                      
+    
+            
+
+    
+
+      

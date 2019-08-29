@@ -1,0 +1,24 @@
+class bankAccount:
+    def __init__(self, int_rate, balance):
+        self.int_rate = int_rate
+        self.balance = 0
+        
+    def deposit(self, amount):
+        self.balance +=amount
+        return self
+    def withdraw(self, amount):
+        self.balance -=amount
+        return self
+    def yield_interest(self):
+        self.int_rate =0.05
+        return self
+    def display_account_info(self):
+        print(self.balance)
+        return self
+
+bank1 = bankAccount('Interest Rate','Your Balance')
+bank2 = bankAccount('Interest Rate2','Your Balance2')
+
+bank1.display_account_info().deposit(100).deposit(100).deposit(100).display_account_info().withdraw(100).display_account_info().yield_interest().display_account_info()
+
+bank2.display_account_info().deposit(200).deposit(200).display_account_info().withdraw(50).withdraw(50).withdraw(50).withdraw(50).display_account_info().yield_interest().display_account_info()
